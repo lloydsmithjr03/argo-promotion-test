@@ -1,4 +1,11 @@
 apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    app.kubernetes.io/instance: argo-promotion-test-int-us-central
+  name: intergration
+---
+apiVersion: v1
 kind: Service
 metadata:
   annotations:
