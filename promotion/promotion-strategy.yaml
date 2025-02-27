@@ -11,9 +11,21 @@ spec:
   - branch: environments/dev-us-central
   - branch: environments/int-us-central
     autoMerge: false
+    activeCommitStatuses:
+    # The controller will monitor this CommitStatus for the active commit SHA, but it will not enforce it. The status 
+    # will be stored on the 
+    - key: healthy
+    proposedCommitStatuses:
+    - key: healthy
+    - key: promoter-previous-environment
   - branch: environments/prod-us-central
     autoMerge: false
+    activeCommitStatuses:
+    # The controller will monitor this CommitStatus for the active commit SHA, but it will not enforce it. The status 
+    # will be stored on the 
+    - key: healthy
     proposedCommitStatuses:
-    - key: hcap
+    - key: healthy
+    - key: promoter-previous-environment
   gitRepositoryRef:
     name: git-repository-argo-promotion-test
