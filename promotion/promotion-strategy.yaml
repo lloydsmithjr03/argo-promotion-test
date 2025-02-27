@@ -5,17 +5,17 @@ metadata:
   name: argocon-demo
   namespace: argocd
 spec:
-  activeCommitStatuses:
-  - key: argocd-health
+  # activeCommitStatuses:
+  # - key: argocd-health
   environments:
   - branch: environments/dev-us-central
   - branch: environments/int-us-central
     autoMerge: false
-    proposedCommitStatuses:
-    - key: promoter-previous-environment
+    # proposedCommitStatuses:
+    # - key: promoter-previous-environment
   - branch: environments/prod-us-central
     autoMerge: false
-    proposedCommitStatuses:
-    - key: promoter-previous-environment
+    # proposedCommitStatuses:
+    # - key: promoter-previous-environment
   gitRepositoryRef:
     name: git-repository-argo-promotion-test
