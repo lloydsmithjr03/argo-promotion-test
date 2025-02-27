@@ -7,6 +7,6 @@ To hydrate the manifests in this repository, run the following commands:
 
 git clone https://github.com/lloydsmithjr03/argo-promotion-test.git
 # cd into the cloned directory
-git checkout 70a523ebb08ee2c24fd913dca464cd82baa8e707
+git checkout 1f4a2c2eb004c4b19f345425c79cc1f21a22d422
 kustomize build ./envs/int-us-central
 ```
