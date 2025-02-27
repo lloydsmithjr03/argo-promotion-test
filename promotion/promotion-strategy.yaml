@@ -5,8 +5,8 @@ metadata:
   name: argocon-demo
   namespace: argocd
 spec:
-  # activeCommitStatuses:
-  # - key: argocd-health
+  activeCommitStatuses:
+    - key: argocd-app-health
   environments:
   - branch: environments/dev-us-central
   - branch: environments/int-us-central
