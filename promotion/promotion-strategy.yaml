@@ -13,7 +13,7 @@ spec:
     autoMerge: false
   - branch: environments/prod-us-central
     autoMerge: false
-    proposedCommitStatuses:
-    - key: hcap
+    # proposedCommitStatuses:
+    # - key: hcap
   gitRepositoryRef:
     name: git-repository-argo-promotion-test
