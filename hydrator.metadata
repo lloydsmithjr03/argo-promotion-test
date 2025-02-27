@@ -1,6 +1,6 @@
 {
   "repoURL": "https://github.com/lloydsmithjr03/argo-promotion-test.git",
-  "drySha": "f84eea278d96a5688c9c5d36ca49a70893042b8c",
+  "drySha": "f838bc64765f692092e3cb90f2719f0d78fbbbd6",
   "commands": [
     "kustomize build ./envs/int-us-central"
   ]
