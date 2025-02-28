@@ -15,9 +15,9 @@ spec:
       repoURL: https://github.com/lloydsmithjr03/argo-promotion-test.git
       targetRevision: HEAD
     hydrateTo:
-      targetBranch: environments/development-next
+      targetBranch: environments/dev-us-central-next
     syncSource:
       path: .
-      targetBranch: environments/development
+      targetBranch: environments/dev-us-central
   syncPolicy:
     automated: {}
