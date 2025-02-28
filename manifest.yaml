@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   labels:
     app.kubernetes.io/instance: argo-promotion-test-dev-us-central
-  name: development
+  name: dev
 ---
 apiVersion: v1
 kind: Service
@@ -13,7 +13,7 @@ metadata:
   labels:
     app.kubernetes.io/instance: argo-promotion-test-dev-us-central
   name: canary-demo
-  namespace: development
+  namespace: dev
 spec:
   ports:
     - name: http
@@ -31,7 +31,7 @@ metadata:
   labels:
     app.kubernetes.io/instance: argo-promotion-test-dev-us-central
   name: canary-demo-preview
-  namespace: development
+  namespace: dev
 spec:
   ports:
     - name: http
@@ -50,7 +50,7 @@ metadata:
     app.kubernetes.io/instance: argo-promotion-test-dev-us-central
     environment: development
   name: canary-demo
-  namespace: development
+  namespace: dev
 spec:
   replicas: 1
   revisionHistoryLimit: 1
