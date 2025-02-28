@@ -8,4 +8,4 @@ spec:
     name: argocon-demo
   applicationSelector:
     matchLabels:
-      app.kubernetes.io/name: argo-promotion-test
+      name: argo-promotion-test
