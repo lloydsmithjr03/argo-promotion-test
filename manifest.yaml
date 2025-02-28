@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   labels:
-    app.kubernetes.io/instance: argo-promotion-test-prod-us-central
+    app.kubernetes.io/instance: production-vc
   name: production
 ---
 apiVersion: v1
@@ -11,7 +11,7 @@ metadata:
   annotations:
     version: v1.0.120
   labels:
-    app.kubernetes.io/instance: argo-promotion-test-prod-us-central
+    app.kubernetes.io/instance: production-vc
   name: canary-demo
   namespace: production
 spec:
@@ -29,7 +29,7 @@ metadata:
   annotations:
     version: v1.0.120
   labels:
-    app.kubernetes.io/instance: argo-promotion-test-prod-us-central
+    app.kubernetes.io/instance: production-vc
   name: canary-demo-preview
   namespace: production
 spec:
@@ -47,7 +47,7 @@ metadata:
   annotations:
     version: v1.0.120
   labels:
-    app.kubernetes.io/instance: argo-promotion-test-prod-us-central
+    app.kubernetes.io/instance: production-vc
     db-schema: v1.11
     environment: production
   name: canary-demo
@@ -77,7 +77,7 @@ spec:
         environment: production
     spec:
       containers:
-        - image: argoproj/rollouts-demo:purple
+        - image: argoproj/rollouts-demo:blue
           imagePullPolicy: Always
           name: canary-demo
           ports:
