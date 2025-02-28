@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
   - promotion-strategy.yaml
   - gitrepo.yaml
-  - hcap-cs.yaml
+  # - hcap-cs.yaml
   - argocd-commitstatus.yaml

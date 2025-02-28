@@ -10,4 +10,4 @@ spec:
   name: argo-promotion-test
   owner: lloydsmithjr03
   scmProviderRef:
-    name: github-scm-provider # The secret that contains the GitHub App configuration
+    name: scmprovider-sample

@@ -2,11 +2,11 @@ apiVersion: promoter.argoproj.io/v1alpha1
 kind: PromotionStrategy
 metadata:
   annotations:
-  name: argocon-demo
+  name: argo-promotion-test-promotion-strategy
   namespace: argocd
 spec:
   activeCommitStatuses:
-    - key: argocd-app-health
+    - key: argocd-health
   environments:
   - branch: environments/dev-us-central
   - branch: environments/int-us-central
