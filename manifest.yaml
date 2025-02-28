@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   labels:
-    app.kubernetes.io/instance: argo-promotion-test-int-us-central
+    app.kubernetes.io/instance: integration-vc
   name: intergration
 ---
 apiVersion: v1
@@ -11,7 +11,7 @@ metadata:
   annotations:
     version: v1.0.120
   labels:
-    app.kubernetes.io/instance: argo-promotion-test-int-us-central
+    app.kubernetes.io/instance: integration-vc
   name: canary-demo
   namespace: intergration
 spec:
@@ -29,7 +29,7 @@ metadata:
   annotations:
     version: v1.0.120
   labels:
-    app.kubernetes.io/instance: argo-promotion-test-int-us-central
+    app.kubernetes.io/instance: integration-vc
   name: canary-demo-preview
   namespace: intergration
 spec:
@@ -47,7 +47,7 @@ metadata:
   annotations:
     version: v1.0.120
   labels:
-    app.kubernetes.io/instance: argo-promotion-test-int-us-central
+    app.kubernetes.io/instance: integration-vc
     environment: staging
   name: canary-demo
   namespace: intergration
