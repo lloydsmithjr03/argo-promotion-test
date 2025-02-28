@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: integration-vc
+  namespace: argocd
+  labels:
+    app: argo-promotion-test
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  project: default
+  sourceHydrator:
+    drySource:
+      path: envs/int-us-central
+      repoURL: https://github.com/lloydsmithjr03/argo-promotion-test.git
+      targetRevision: HEAD
+    hydrateTo:
+      targetBranch: environments/int-us-central-next
+    syncSource:
+      path: .
+      targetBranch: environments/int-us-central
+  syncPolicy:
+    automated: {}
