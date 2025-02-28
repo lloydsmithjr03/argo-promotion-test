@@ -9,6 +9,7 @@ spec:
     - key: argocd-health
   environments:
   - branch: environments/dev-us-central
+    autoMerge: false
   - branch: environments/int-us-central
     autoMerge: false
     # proposedCommitStatuses:
